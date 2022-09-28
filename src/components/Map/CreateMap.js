@@ -2,8 +2,7 @@ import React from "react";
 import "./map.css";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import {Icon} from 'leaflet'
-//import { LatLngBounds, LatLng } from 'leaflet';
-// const boundary = new LatLngBounds(new LatLng(46.419952, 15.869688), new LatLng(42.650661, 18.094423));
+
 
 function CreateMap({ data, loading, error }) {
   if (loading) {
@@ -31,6 +30,7 @@ function CreateMap({ data, loading, error }) {
   }
 
   return (
+    <div id="map">
     <MapContainer
       center={[45.1, 15.2]}
       zoom={8}
@@ -64,6 +64,7 @@ function CreateMap({ data, loading, error }) {
         </Marker>
       ))}
     </MapContainer>
+    </div>
   );
 }
 
