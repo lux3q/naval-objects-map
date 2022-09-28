@@ -8,7 +8,7 @@ const CreateTable = ({ data, loading, error }) => {
 
   const firstPage = () => {
     setPage(1);
-  }
+  };
 
   const decrementPage = () => {
     let newPageNumber = page - 1;
@@ -16,7 +16,7 @@ const CreateTable = ({ data, loading, error }) => {
       newPageNumber = 1;
     }
     setPage(newPageNumber);
-  }
+  };
 
   const incrementPage = () => {
     const maxPage = Math.ceil(data.features.length / pageSize);
@@ -25,12 +25,12 @@ const CreateTable = ({ data, loading, error }) => {
       newPageNumber = maxPage;
     }
     setPage(newPageNumber);
-  }
+  };
 
   const lastPage = () => {
     const maxPage = Math.ceil(data.features.length / pageSize);
     setPage(maxPage);
-  }
+  };
 
   if (loading) {
     return <div className="loading-msg">A moment please...</div>;
@@ -59,15 +59,17 @@ const CreateTable = ({ data, loading, error }) => {
           </tr>
         </thead>
         <tbody>
-          {data.features.slice((page - 1) * pageSize, page * pageSize).map((element, elementIndex) => (
-            <tr key={elementIndex}>
-              <td>{element.properties.naziv_objekta || "-"}</td>
-              <td>{element.properties.ps_br || "-"}</td>
-              <td>{element.properties.e_br || "-"}</td>
-              <td>{element.properties.tip_objekta || "-"}</td>
-              <td>{element.properties.lucka_kapetanija || "-"}</td>
-            </tr>
-          ))}
+          {data.features
+            .slice((page - 1) * pageSize, page * pageSize)
+            .map((element, elementIndex) => (
+              <tr key={elementIndex}>
+                <td>{element.properties.naziv_objekta || "-"}</td>
+                <td>{element.properties.ps_br || "-"}</td>
+                <td>{element.properties.e_br || "-"}</td>
+                <td>{element.properties.tip_objekta || "-"}</td>
+                <td>{element.properties.lucka_kapetanija || "-"}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
       <div>

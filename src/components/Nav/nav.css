@@ -1,0 +1,34 @@
+.nav-container {
+    min-height: 7vh;
+    background-color: rgb(28, 138, 228);
+    color: white;
+    
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0px auto;
+  
+  }
+  
+  p {
+    margin-top: 24px;
+    font-size: 24px;
+  }
+  
+  .nav-links {
+    margin-top: 26px ;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+  }
