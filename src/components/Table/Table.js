@@ -72,11 +72,11 @@ const CreateTable = ({ data, loading, error }) => {
             ))}
         </tbody>
       </table>
-      <div>
+      <div className="buttons">
         <button onClick={firstPage}>First</button>
-        <button onClick={decrementPage}>-</button>
+        <button onClick={decrementPage}>&larr;</button>
         {page}
-        <button onClick={incrementPage}>+</button>
+        <button onClick={incrementPage}>&rarr;</button>
         <button onClick={lastPage}>Last</button>
       </div>
     </div>

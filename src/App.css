@@ -6,3 +6,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.loading-msg {
+  font-size: 36px;
+  margin-top: 24px;
+  text-align: center;
+  color: rgb(146, 132, 132);
+}
+
+.error-msg {
+  font-size: 36px;
+  margin-top: 24px;
+  text-align: center;
+  color: rgb(247, 132, 132);
+}
